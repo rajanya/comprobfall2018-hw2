@@ -54,4 +54,20 @@ remember to "make" it before running.
 
    ./devel/lib/ackermann_client/navigate
 
+### Publishing to ackermann_cmd:
+
+/ackermann_cmd is a ROS topic that is subscribed to by the node ackermann_controller, which is provided by us. You can view the message description by running the command:
+
+rosmsg show ackermann_msgs/AckermannDrive
+
+The result:
+
+float32 steering_angle
+float32 steering_angle_velocity
+float32 speed
+float32 acceleration
+float32 jerk
+
+You will have to write a ROS publisher (in C++ or Python) that will
+publish 'steering_angle' and 'speed' to this topic. Please refer to the ackermann_client/navigate.cc for basic understanding.
 
