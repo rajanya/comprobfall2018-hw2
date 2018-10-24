@@ -40,3 +40,18 @@ remember to "make" it before running.
 
 5. Currently our PQP demo program only supports cpp programing, we will release a python compatible version later this week.
 
+
+
+## Ackermann - Compilation, Visualization, Demo Client:
+
+1. cd $HOME/catkin_ws/; catkin_make
+
+2. export GAZEBO_MODEL_PATH=$HOME/catkin_ws/src/comprobfall2018-hw2/models:$GAZEBO_MODEL_PATH
+
+3. roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch &
+
+4. To visualize the ackermann vehicle navigating, run:
+
+   ./devel/lib/ackermann_client/navigate
+
+
