@@ -57,11 +57,13 @@ remember to "make" it before running.
 
 1. cd $HOME/catkin_ws/; catkin_make
 
-2. export GAZEBO_MODEL_PATH=$HOME/catkin_ws/src/comprobfall2018-hw2/models:$GAZEBO_MODEL_PATH
+2. source $HOME/catkin_ws/devel/setup.bash
 
-3. roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch &
+3. export GAZEBO_MODEL_PATH=$HOME/catkin_ws/src/comprobfall2018-hw2/models:$GAZEBO_MODEL_PATH
 
-4. To visualize the ackermann vehicle navigating, run:
+4. roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch &
+
+5. To visualize the ackermann vehicle navigating, run:
 
    ./devel/lib/ackermann_client/navigate
 
