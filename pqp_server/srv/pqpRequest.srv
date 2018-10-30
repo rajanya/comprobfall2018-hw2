@@ -1,0 +1,4 @@
+float64[] T
+float64[] R
+---
+bool result

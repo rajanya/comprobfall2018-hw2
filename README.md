@@ -19,6 +19,8 @@
 
 ## PQP description and using PQP for collision check:
 
+### CPP compatible version:
+
 1. Package for PQP is located in "pqp_comprob" folder. 
 
 2. There are 2 folders inside "pqp_comprob": 
@@ -38,8 +40,17 @@ remember to "make" it before running.
    
    $ cd $HOME/catkin_ws/src/comprobfall2018-hw2/pqp_comprob/pqp_client_comprob; make clean; make
 
-5. Currently our PQP demo program only supports cpp programing, we will release a python compatible version later this week.
+### Python and ROS compatible version
 
+1. "pqp_server" is a ROS package, put this folder in your catkin_ws/src/ directory.
+
+2. Compile the package in ROS: run "catkin_make" in catkin_ws.
+
+3. Bring up the server: First, run roscore in a separate terminal. Second, run "roscd pqp_server", then run "rosrun pqp_server pqp_ros_server" in the same terminal. (pqp_ros_server reads mesh correctly only by following these steps)
+
+4. Collision check using Python node: We have a example python code in "pyscript" folder. Run this example using "rosrun pqp_server pqp_ros_client.py"
+
+5. Write your own Python node: In the node you have to give the service 2 parameters, T is a float list with size 3, R is a float list with size 9. T is the translation vector of the piano, R is the rotation matrix flatten in row major order of the piano.
 
 
 ## Ackermann - Compilation, Visualization, Demo Client:
