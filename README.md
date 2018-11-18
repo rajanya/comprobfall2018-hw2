@@ -61,7 +61,7 @@ remember to "make" it before running.
 
 3. export GAZEBO_MODEL_PATH=$HOME/catkin_ws/src/comprobfall2018-hw2/models:$GAZEBO_MODEL_PATH
 
-4. roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch &
+4. roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch & (the & is not recommended)
 
 5. To visualize the ackermann vehicle navigating, run:
 
